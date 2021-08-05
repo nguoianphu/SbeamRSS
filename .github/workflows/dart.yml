@@ -39,7 +39,7 @@ jobs:
         rm -rf *.lock || true
         flutter clean
         flutter pub get
-        flutter build apk --split-per-abi --dart-define=NEWS_API_KEY=${{ secrets.NEWS_API_KEY }}
+        flutter build apk --split-per-abi
 
     - name: artifact app-armeabi-v7a-release
       uses: actions/upload-artifact@v2
